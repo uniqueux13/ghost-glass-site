@@ -36,7 +36,7 @@ function App() {
           {lensActive && (
             <div className="ghost-marker title-marker">
               {/* 💎 CUSTOM GHOST ICON */}
-              <img src="/icon128.png" className="ghost-icon-img" />
+              <img src="/icon128.png" className="ghost-icon-img" alt="icon" />
               <div className="ghost-tooltip">
                 <div style={{ marginBottom: '8px' }}>This is the hidden layer.</div>
                 <div className="tooltip-meta">
@@ -57,13 +57,19 @@ function App() {
 
           {/* DOWNLOAD BUTTON + GHOST MARKER */}
           <div style={{ position: 'relative' }} className={lensActive ? 'ghost-spotlight' : ''}>
-            <button className="btn-primary">
+            <a
+              href="https://chromewebstore.google.com/detail/ghost-glass/jdfcpbikkapgnfnnhmnbcekklimonckg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}
+            >
               <Download size={20} /> Add to Chrome
-            </button>
+            </a>
 
             {lensActive && (
               <div className="ghost-marker btn-marker">
-                <img src="/icon128.png" className="ghost-icon-img" />
+                <img src="/icon128.png" className="ghost-icon-img" alt="icon" />
                 <div className="ghost-tooltip">
                   <div style={{ marginBottom: '8px' }}>Join the protocol. It's safe.</div>
                   <div className="tooltip-meta">
